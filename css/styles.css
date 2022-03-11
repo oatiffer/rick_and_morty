@@ -16,7 +16,7 @@ html {
 
 .container {
   width: 1140px;
-  margin-inline: 82px;
+  margin-inline: auto;
   margin-block-end: 10px;
   box-shadow: 0px 0px 20px var(--gray-600);
   overflow: hidden;
