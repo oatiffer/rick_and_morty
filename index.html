@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6c86cecd2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" type="module" defer></script>
+    <title>Rick and Morty</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <img class="navigation__logo" src="./logo/rickandmorty.png" alt="">
+            <div class="navigation__search-container">
+                <input class="navigation__search" type="text" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="navigation__menu">
+                <a href="#" class="navigation__link">Top Characters</a>
+                <a href="#" class="navigation__link">All Characters</a>
+                <a href="#" class="navigation__link">Random</a>
+            </div>
+        </nav>
+        <div class="characters__container"></div>
+        <div class="character__info">
+            <h1 class="info__title"></h1>
+            <ul class="info__details">
+                <li class="details__species">Species:
+                    <span class="details__species-value"></span>
+                </li>
+                <li class="details__planet">Planet:
+                    <span class="details__planet-value"></span>
+                </li>
+                <li class="details__status">Status:
+                    <span class="details__status-value"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="search__list-container">
+            <div class="search__list-nocontent"></div>
+        </div>
+    </div>
+</body>
+
+</html>

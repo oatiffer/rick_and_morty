@@ -1,0 +1,209 @@
+:root {
+  --gray-900: #101828;
+  --gray-700: #344054;
+  --gray-600: #475467;
+  --gray-500: #667085;
+  --gray-400: #98a2b3;
+  --gray-300: #d0d5dd;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Chilanka", cursive;
+}
+
+.container {
+  width: 1140px;
+  margin-inline: 82px;
+  margin-block-end: 10px;
+  box-shadow: 0px 0px 20px var(--gray-600);
+  overflow: hidden;
+}
+
+.navigation {
+  width: 100%;
+  height: 64px;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+
+.navigation__logo {
+  width: 124px;
+  height: 84px;
+  margin-inline-start: 1%;
+  object-fit: cover;
+}
+
+.navigation__search-container {
+  height: 100%;
+  width: 380px;
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-900);
+  position: relative;
+}
+
+.navigation__search {
+  width: 100%;
+  height: 100%;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gray-400);
+  outline: none;
+  appearance: none;
+  border: none;
+  padding-inline-start: 14px;
+  background: transparent;
+}
+
+.navigation__search:focus {
+  background-color: var(--white);
+}
+
+.fa-search,
+.navigation__search::placeholder {
+  opacity: 0.4;
+  color: var(--gray-400);
+}
+
+.fa-search {
+  font-size: 1.8rem;
+  position: absolute;
+  inset-inline-end: 16px;
+  cursor: pointer;
+}
+
+.search__list-container {
+  width: 380px;
+  height: fit-content;
+  max-height: 460px;
+  padding-block-end: 4px;
+  background-color: var(--white);
+  overflow-y: scroll;
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  position: absolute;
+  inset-block-start: 64px;
+  inset-inline-start: 380px;
+  animation: fade-in 0.3s linear;
+  transition: ease 0.3s;
+}
+
+.search__list-nocontent {
+  height: 80px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gray-400);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+}
+
+.list__item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.list__item-desc {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+}
+
+.navigation__menu {
+  height: 100%;
+  margin-inline-end: 2%;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.navigation__link {
+  color: var(--white);
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.characters__container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: none;
+  grid-template-columns: repeat(6, auto);
+  grid-auto-rows: 246px;
+  background-color: var(--black);
+}
+
+.character__image-wrapper {
+  width: 190px;
+}
+
+.character__image {
+  width: 100%;
+  height: 246px;
+  object-fit: cover;
+}
+
+.character__info {
+  width: 380px;
+  height: 246px;
+  background-color: var(--white);
+  position: absolute;
+  inset-block-start: 64px;
+  inset-inline: 0;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  opacity: 0;
+  transition: ease 0.3s;
+}
+
+.info__title {
+  height: 40px;
+  padding-inline-start: 16px;
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+}
+
+.info__details {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  margin-inline-start: 16px;
+  margin-block-start: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.details__species-value,
+.details__planet-value,
+.details__status-value {
+  color: var(--gray-500);
+  font-weight: 700;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
